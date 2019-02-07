@@ -1,0 +1,3 @@
+- name: Install Vim
+  pkg5:
+    name: editor/vim
