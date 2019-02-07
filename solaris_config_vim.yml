@@ -1,0 +1,11 @@
+---
+- name: Install Vim
+  hosts: "{{ var1 }}"
+  remote_user: linux
+  gather_facts: no
+  tasks:
+    - name: install VIM editor on solaris
+      pkg5: name=editor/vim
+      become: yes
+      become_method: sudo
+      become_user: root
