@@ -1,0 +1,12 @@
+---
+- name: install and start Apache
+  hosts: vm
+  remote_user: linux
+  gather_facts: no
+  tasks:
+    - name: install Apache on Solaris
+      pkg5: name=web/server/apache-24
+      become: yes
+      become_method: sudo
+      become_user: root
+
