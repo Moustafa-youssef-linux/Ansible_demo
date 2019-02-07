@@ -2,7 +2,7 @@
 - name: install and start Apache
   remote_user: linux
   gather_facts: no
-  hosts: 10.0.0.32
+  hosts: "{{ var1 }}"
   tasks:
     - name: install Apache on Solaris
       pkg5: name=web/server/apache-24
