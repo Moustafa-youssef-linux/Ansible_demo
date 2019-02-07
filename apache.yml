@@ -3,6 +3,7 @@
   hosts: "{{ var1 }}"
   remote_user: linux
   gather_facts: no
+  hosts: 10.0.0.32
   tasks:
     - name: install Apache on Solaris
       pkg5: name=web/server/apache-24
