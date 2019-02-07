@@ -1,3 +1,4 @@
+---
 - name: Install Vim
   remote_user: linux
   gather_facts: no
