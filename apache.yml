@@ -1,6 +1,6 @@
 ---
 - name: install and start Apache
-  hosts: vm
+  hosts: "{{ var1 }}"
   remote_user: linux
   gather_facts: no
   tasks:
