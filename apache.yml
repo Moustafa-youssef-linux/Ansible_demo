@@ -1,6 +1,5 @@
 ---
 - name: install and start Apache
-  hosts: vm
   remote_user: linux
   gather_facts: no
   tasks:
