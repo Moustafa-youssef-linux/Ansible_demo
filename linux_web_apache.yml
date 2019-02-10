@@ -1,0 +1,13 @@
+---
+- name: install and start Apache
+  hosts: "{{ var1 }}"
+  remote_user: root
+  gather_facts: no
+  tasks:
+    - name: install Apache on redhat 7
+      yum:
+        name: "{{ packages }}"
+      vars:
+        packages:
+        - httpd
+        - httpd-tools
