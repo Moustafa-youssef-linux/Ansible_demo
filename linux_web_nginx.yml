@@ -9,4 +9,4 @@
         name: "{{ packages }}"
       vars:
         packages:
-        - nginx
+        - pcp-pmda-nginx.x86_64
