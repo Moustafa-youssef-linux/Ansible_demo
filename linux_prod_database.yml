@@ -6,3 +6,5 @@
   tasks:
     - name: testing
       script: test.sh
+      become: yes
+      become_user: oracle
