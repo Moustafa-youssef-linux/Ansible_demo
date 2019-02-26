@@ -1,0 +1,10 @@
+---
+- name: install oracle database on linux
+  hosts: "{{ var1 }}"
+  remote_user: root
+  gather_facts: no
+  tasks:
+    - name: testing
+      script: test.sh
+      become: yes
+      become_user: oracle
