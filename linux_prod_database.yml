@@ -4,6 +4,42 @@
   remote_user: root
   gather_facts: no
   tasks:
+<<<<<<< HEAD
+=======
+    - name: create the dirctory for host the scripts
+      file:
+        path: /scripts
+        state: directory
+    - name: copying the scripts to host
+      copy:
+         src: /root/tower/database/1-db-pre.sh
+         dest: /scripts/1-db-pre.sh
+         owner: root
+         group: root
+         mode: 0644
+    - name: copy the second script
+      copy:
+         src: /root/tower/database/2-db-ins.sh
+         dest: /scripts/2-db-ins.sh
+         owner: root
+         group: root
+         mode: 0644
+    - name: copy the thrid script
+      copy:
+         src: /root/tower/database/3-db-post-root.sh
+         dest: /scripts/3-db-post-root.sh
+         owner: root
+         group: root
+         mode: 0644
+    - name: copy the forth script
+      copy:
+         src: /root/tower/database/4-db-post-oracle.sh
+         dest: /scripts/4-db-post-oracle.sh
+         owner: root
+         group: root
+         mode: 0644
+ 
+>>>>>>> fc31747bbb75e4718921f67b48e26be929c2c7a7
     - name: installing pre-requisites for database
       script: /demo/1-db-pre.sh 
 
