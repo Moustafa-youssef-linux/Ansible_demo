@@ -23,13 +23,15 @@
          group: root
          mode: 0644
     - name: copy the thrid script
-      src: /root/tower/database/3-db-post-root.sh
+      copy:
+         src: /root/tower/database/3-db-post-root.sh
          dest: /scripts/3-db-post-root.sh
          owner: root
          group: root
          mode: 0644
     - name: copy the forth script
-      src: /root/tower/database/4-db-post-oracle.sh
+      copy:
+         src: /root/tower/database/4-db-post-oracle.sh
          dest: /scripts/4-db-post-oracle.sh
          owner: root
          group: root
