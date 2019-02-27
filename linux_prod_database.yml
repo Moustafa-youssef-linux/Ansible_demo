@@ -4,7 +4,20 @@
   remote_user: root
   gather_facts: no
   tasks:
-    - name: testing
-      script: test.sh
+    - name: installing pre-requisites for database
+      script: /root/tower/database/1-db-pre.sh "{{ var1 }}"
+
+    - name: installing oracle database  
+      script: /root/tower/database/2-db-ins.sh
+      become: yes
+      become_user: oracle
+
+    - name: post scripts for database installation
+      script: /root/tower/database/3-db-post-root.sh
+      become: yes
+      become_user: root
+
+    - name: post scripts for database installation
+      script: /root/tower/database/4-db-post-oracle.sh
       become: yes
       become_user: oracle
