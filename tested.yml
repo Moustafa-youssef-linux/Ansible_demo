@@ -1,0 +1,12 @@
+---
+- name: install and start Nginx
+  hosts: all
+  remote_user: root
+  gather_facts: no
+  tasks:
+    - name: Download sources
+      file:
+          path: /root/tested_file
+          owner: root
+          group: root
+          mode: 01777
