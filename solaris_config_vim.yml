@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 - name: Install Vim
   hosts: "{{ var1 }}"
@@ -9,3 +10,19 @@
       become: yes
       become_method: sudo
       become_user: root
+=======
+---
+- name: Install Vim
+  remote_user: linux
+  gather_facts: no
+  hosts: "{{ var1 }}"
+  tasks:
+    - name: install VIM editor on solaris
+      pkg5: name=editor/vim
+      become: yes
+      become_method: sudo
+      become_user: root
+     
+     
+     
+>>>>>>> 06f14e34c0abffa029939a9bf0d43e206794a062

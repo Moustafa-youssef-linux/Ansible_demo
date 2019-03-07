@@ -1,0 +1,12 @@
+---
+- name: install and start Nginx
+  hosts: "{{ var1 }}"
+  remote_user: root
+  gather_facts: no
+  tasks:
+    - name: install Nginx on redhat 7
+      yum:
+        name: "{{ packages }}"
+      vars:
+        packages:
+        - pcp-pmda-nginx.x86_64

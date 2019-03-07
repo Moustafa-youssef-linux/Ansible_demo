@@ -1,0 +1,16 @@
+---
+- name: install and start Nginx
+  hosts: "{{ var1 }}"
+  remote_user: root
+  gather_facts: no
+  tasks:
+    - name: Download sources
+      get_url:
+        url: http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+        dest: /opt/mysql-community-release-el7-5.noarch.rpm
+    - name: Install package
+      yum:
+        name: /opt/mysql-community-release-el7-5.noarch.rpm
+        state: present
+    - name: Install MySQL
+      yum: name=mysql state=installed

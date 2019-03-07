@@ -1,0 +1,15 @@
+---
+- name: install and start Apache
+  hosts: "{{ var1 }}"
+  remote_user: root
+  gather_facts: no
+  tasks:
+    - name: install Apache on redhat 7
+      yum:
+        name: "{{ packages }}"
+      vars:
+        packages:
+        - https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-oraclelinux96-9.6-3.noarch.rpm
+        - postgresql96-server
+        - postgresql96-contrib
+        - postgresql96-devel
