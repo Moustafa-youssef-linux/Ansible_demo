@@ -1,6 +1,6 @@
 ---
 - name: install and start Nginx
-  hosts: all
+  hosts: localhost
   remote_user: root
   gather_facts: no
   tasks:
