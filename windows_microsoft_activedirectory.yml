@@ -13,7 +13,7 @@
     - name: create new forest
       win_domain:
         dns_domain_name: example.com
-        safe_mode_password: Root1234
+        safe_mode_password: P@ssw0rd
       register: result
     - name: Reboot After creation
       win_reboot:
